@@ -9,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn //기본이 DType = 칼럼이름 정하는거
 @Getter @Setter
 public abstract class Item {
     @Id @GeneratedValue
