@@ -16,7 +16,7 @@ public class Category {
 
     private String name;
     //자신의 상위 카테고리. 셀프 매핑도 가능
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
     private Category parent;
 
